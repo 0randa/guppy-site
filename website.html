@@ -37,18 +37,44 @@
                 align-items: center;
                 margin-right: 50px;
                 margin-left: 50px;
+                border-radius: 10px;
             }
 
             .guppy-info img {
                 height: 150px;
                 width: 100%;
                 object-fit: cover;
+                border-radius: 10px;
             }
 
             .guppy-description {
                 display: grid;
                 text-align: center;
                 vertical-align: middle;
+            }
+
+            .guppy-description button {
+                margin: auto;
+                width: 120px;
+                height: 25px;
+                background-color: blue;
+                color: white;
+                border: none;
+                border-radius: 20px;
+            }
+
+            .guppy-description button:hover {
+                cursor: pointer;
+            }
+
+            .guppy-description button:active {
+                opacity: 0.5;
+            }
+
+            .guppy-description p {
+                margin-top: 0px;
+                margin-bottom: 0px;
+                line-height: 25px;
             }
         </style>
 
@@ -58,12 +84,17 @@
 
         <div class="header">
             <div class="left-section">
-                <p>Fish Sales Website thing</p>
+                <p>HOME</p>
+                <p>SHOP</p>
+                <p>GUPPIES</p>
+                <p>CONTACT</p>
+                <p>FAQ</p>
             </div>
             <div class="middle-section">
                 middle section
             </div>
             <div class="right-section">
+                <img src="icons/search.svg">
                 <img src="icons/profile-icon.jpeg">
                 <img src="icons/shopping-cart.png">
             </div>
@@ -71,7 +102,15 @@
 
         
 
-        <div class="sidebar">Sidebar</div>
+        <div class="sidebar">
+            <p>Sidebar</p>
+            <p>Sort by</p>
+            <p>Filter</p>
+
+            <p>Categories</p>
+            <p>Live plants</p>
+            <p>Fish tanks</p>
+        </div>
         
         <div class="guppy-grid">
             <div class="guppy-info">
@@ -79,8 +118,8 @@
                 <div class="guppy-description">
                     <p>Male Tuxedo Guppy</p>
                     <p>$20</p>
+                    <button>Add to cart</button>
                 </div>
-                <button>Add to cart</button>
             </div>
     
             <div class="guppy-info">
@@ -88,36 +127,44 @@
                 <div class="guppy-description">
                     <p>Male Dumbo Mosaic Guppy</p>
                     <p>$20</p>
+                    <button>Add to cart</button>
                 </div>
-                <button>Add to cart</button>
             </div>
 
             <div class="guppy-info">
                 <img src="images/endler-guppy.jpg">
-                <p>Endler Guppy</p>
-                <p>$15</p>
-                <button>Add to cart</button>
+                <div class="guppy-description">
+                    <p>Endler Guppy</p>
+                    <p>$15</p>
+                    <button>Add to cart</button>
+                </div>
             </div>
 
             <div class="guppy-info">
                 <img src="images/female-mutt-guppy.jpg">
-                <p>Female Mutt Guppy</p>
-                <p>$10</p>
-                <button>Add to cart</button>
+                <div class="guppy-description">
+                    <p>Female Mutt Guppy</p>
+                    <p>$10</p>
+                    <button>Add to cart</button>
+                </div>
             </div>
 
             <div class="guppy-info">
                 <img src="images/female-koi-guppy.jpeg">
-                <p>Female Koi Guppy</p>
-                <p>$15</p>
-                <button>Add to cart</button>
+                <div class="guppy-description">
+                    <p>Female Koi Guppy</p>
+                    <p>$15</p>
+                    <button>Add to cart</button>
+                </div>
             </div>
 
             <div class="guppy-info">
                 <img src="images/red-albino-guppy.jpg">
-                <p>Male Red Albino Guppy</p>
-                <p>$20</p>
-                <button>Add to cart</button>
+                <div class="guppy-description">
+                    <p>Male Red Albino Guppy</p>
+                    <p>$20</p>
+                    <button>Add to cart</button>
+                </div>
             </div>
         </div>
     </body>

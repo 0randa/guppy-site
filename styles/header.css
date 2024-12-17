@@ -18,19 +18,21 @@
 
 .left-section {
     display: flex;
-    flex: 1;
+    flex: 1.5;
     background-color: lightgreen;
+    gap: 20px;
+    justify-content: space-around;
 }
 
 .middle-section {
     display: flex;
-    flex: 2;
+    flex: 3;
     background-color: lightpink;
 }
 
 .right-section {
     display: flex;
-    flex: 1;
+    flex: 0.5;
     background-color: lightgrey;
     align-items: center;
 }
