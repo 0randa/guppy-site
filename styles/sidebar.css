@@ -1,0 +1,30 @@
+.sidebar {
+    position: fixed;
+    width: 120px;
+    left: 0;
+    bottom: 0;
+    top: 70px;
+    left: 20px;
+    border-right: 2px solid lightgrey;
+    box-shadow: 3px 0px 0px 0px rgba(191, 191, 207, 0.2);
+}
+
+.price-box:hover {
+    color: lightcoral;
+    cursor: pointer;
+}
+
+.sidebar-box {
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+
+.sidebar-box-category {
+    font-weight: 600;
+    line-height: 5px;
+}
+
+.sidebar-box-elements {
+    line-height: 9px;
+    display: block;
+}

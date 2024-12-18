@@ -32,9 +32,15 @@
     background-color: lightpink;
 }
 
+
 .middle-section p {
     text-align: center;
     margin: auto;
+}
+
+.middle-section p:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .right-section {
