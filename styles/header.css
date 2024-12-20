@@ -1,60 +1,69 @@
 .header {
-    height: 55px;
-
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
+    flex-direction: column; /* Stack top and bottom sections in rows */
     position: fixed;
     top: 0;
-    left: 75px;
-    right: 75px;
-    gap: 100px;
+    left: 0px;
+    right: 0px;
     z-index: 100;
-    background-color: lightblue;
-    margin-bottom: 10px;
-
-}
-
-.left-section{
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    max-width: auto;
+    gap: 10px; /* Space between top and bottom sections */
+    padding: 10px 0; /* Add padding for spacing */
     align-items: center;
-    flex: 0.5;
-    background-color: lightgreen;
-}
-
-.middle-section {
-    display: flex;
-    flex: 2;
-    background-color: lightpink;
+    border-bottom: 2px solid lightgray;
 }
 
 
-.middle-section p {
-    text-align: center;
-    margin: auto;
+.bottom-section,
+.top-section {
+    display: flex; 
+    align-items: center;
+    width: 55%;
 }
 
-.middle-section p:hover {
+.top-section {
+    justify-content: space-between;
+    width: 47%;
+}
+
+.bottom-section {
+    justify-content: space-around;
+}
+
+.bottom-section p:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
+
+.left-section {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 70%;
+}
+
 .right-section {
     display: flex;
-    flex: 0.4;
-    background-color: lightgrey;
-    align-items: center;
+    justify-content: flex-end;
 }
+
 
 .right-section img {
     height: 40px;
     width: 40px;
-    border-radius: 20px;
-    margin-right: 15px;
-    margin-left: 15px;
-    vertical-align: center;
+    border-radius: 50%; /* Circular images */
+    margin: 0 10px;
+}
+
+.left-section img {
+    height: 100px;
+    width: 100px;
+    border-radius: 40px;
+    margin-right: 20px;
+}
+
+.left-section p {
+    color: blue;
+    font-size: 22px;
+    font-weight: 600;
 }
