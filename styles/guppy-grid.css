@@ -29,7 +29,7 @@
 }
 
 .guppy-info img {
-    height: 70%;
+    height: 60%;
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
@@ -43,8 +43,8 @@
 
 .guppy-description button {
     margin: auto;
-    width: 120px;
-    height: 25px;
+    width: 80%;
+    height: 35px;
     background-color: blue;
     color: white;
     border: none;
