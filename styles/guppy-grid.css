@@ -9,14 +9,14 @@
     display: grid;
     position: absolute;
     justify-content: center;
-    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap:10px;
     justify-content: space-between;
     background-color: lightpink;
-    width: 900px;
-    left: 20%;
-    right: 10%;
-    top: 25%;
+    width: 100%;
+    left: 142px;
+    right: 0;
+    top: 186px;
 }
 
 
