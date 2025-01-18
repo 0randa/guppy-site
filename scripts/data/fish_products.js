@@ -1,5 +1,3 @@
-
-
 let idCounter = 0
 
 export let fish = [

@@ -1,5 +1,5 @@
 .guppy-paragraph {
-    display: flex; /* Use flexbox for this parent if applicable */
+    display: flex; 
     position: absolute;
     left: 10%;
     top: 70px;
@@ -20,15 +20,15 @@
 }
 
 .guppy-info {
-    display: flex; /* Set the guppy-info container as a flexbox */
-    flex-direction: column; /* Stack child elements vertically */
-    align-items: center; /* Center child elements horizontally */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
     width: 330px;
     height: 400px;
     background-color: lightblue;
     border-radius: 10px;
-    padding: 10px; /* Add some spacing inside the box */
-    box-sizing: border-box; /* Ensure padding doesn't affect width/height */
+    padding: 10px; 
+    box-sizing: border-box; 
 }
 
 .guppy-info img {
@@ -39,9 +39,9 @@
 }
 
 .guppy-description {
-    display: flex; /* Set description as a flexbox */
-    flex-direction: column; /* Stack child elements vertically */
-    align-items: center; /* Center text and button */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
     width: 250px;
     text-align: center;
 }
@@ -53,7 +53,7 @@
     color: white;
     border: none;
     border-radius: 20px;
-    margin-top: 10px; /* Add spacing above the button */
+    margin-top: 10px; 
 }
 
 .guppy-description button:hover {
@@ -65,6 +65,6 @@
 }
 
 .guppy-description p {
-    margin: 5px 0; /* Add spacing between paragraphs */
+    margin: 5px 0; 
     line-height: 25px;
 }
