@@ -1,7 +1,5 @@
 import { fish } from "./data/fish_products.js";
 
-
-
 console.log("hi")
 
 let gridHTML = '';
@@ -15,7 +13,7 @@ fish.forEach((fish) => {
                 <div class="guppy-description">
                     <p>${fish.name}</p>
                     <p>$${fish.priceCents / 100}</p>
-                    <button>Add to cart</button>
+                    <button class="add-to-cart-btn" data-fish-id=${fish.id}>Add to cart</button>
                 </div>
             </div>
     `
@@ -24,4 +22,6 @@ fish.forEach((fish) => {
 
 const res = document.querySelector('.guppy-grid').innerHTML = gridHTML
 console.log(res);
+
+
 
