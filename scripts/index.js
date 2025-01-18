@@ -1,7 +1,7 @@
 import { fish } from "./data/fish_products.js";
-import { cart } from "./data/cart.js";
+import { Cart } from "./data/cart.js";
 
-
+const cart = new Cart();
 
 function renderGuppyHTML() {
     let gridHTML = '';
@@ -30,8 +30,11 @@ function buttonListener() {
         button.addEventListener("click", (event) => {
             const fishId = parseInt(event.target.dataset.fishId);
             const targetFish = fish.find(f => f.id === fishId);
+
+            const {id, name, priceCents} = targetFish
+            cart.append({id, name, priceCents})
+            cart.print_cart()
             alert(`${targetFish.name} added to cart!`);
-            
         })
     })
 }
