@@ -27,3 +27,50 @@
     width: 100%;
     flex-shrink: 0;
 }
+
+.shopping-cart-items-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.shopping-cart-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.product-info img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.quantity-square {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: lightgray;
+    background-color: wheat;
+    line-height: 1;
+}
+
+.shopping-cart-header p {
+    text-align: center;
+}
