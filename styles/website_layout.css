@@ -1,0 +1,11 @@
+.website_layout {
+    display: grid;
+    /* have 2 rows */
+    grid-template-rows: 2fr 10fr;
+}
+
+
+.rest-of-website {
+    display: flex;
+    flex-direction: row;
+}

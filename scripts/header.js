@@ -34,7 +34,8 @@ function headStyles() {
     `       <link rel="stylesheet" href="styles/general.css">
             <link rel="stylesheet" href="styles/header.css">
             <link rel="stylesheet" href="styles/sidebar.css">
-            <link rel="stylesheet" href="styles/guppy-grid.css">`
+            <link rel="stylesheet" href="styles/guppy-grid.css">
+            <link rel="stylesheet" href="styles/website_layout.css">`
 }
 
 
