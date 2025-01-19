@@ -34,7 +34,7 @@ function buttonListener() {
             const {id, name, priceCents} = targetFish
             cart.append({id, name, priceCents})
             // debug statement
-            // cart.print_cart()
+            cart.print_cart()
             alert(`${targetFish.name} added to cart!`);
         })
     })
