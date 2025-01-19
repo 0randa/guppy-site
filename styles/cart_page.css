@@ -49,12 +49,15 @@
 .product-info {
     display: flex;
     align-items: center;
+    flex: 1;
 }
 
 .quantity-info {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     gap: 5px;
+    flex: 1;
 }
 
 .quantity-square {
@@ -73,4 +76,11 @@
 
 .shopping-cart-header p {
     text-align: center;
+}
+
+.price-tag {
+    display: flex;
+    flex: 1;
+    align-items: flex-end;
+    justify-content: end;
 }
