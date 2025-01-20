@@ -1,6 +1,6 @@
 export class Cart {
     constructor() {
-        this._cart = []
+        this._cart = JSON.parse(localStorage.getItem('cart')) || [];
     }
 
     append(item) {
@@ -13,6 +13,14 @@ export class Cart {
         } else {
             inArray.quantity += 1;
         }
+    }
+
+    saveToLocalStorage() {
+        localStorage.setItem('cart', JSON.stringify(this._cart));
+    }
+
+    getItems() {
+        return this._cart;
     }
 
     print_cart() {

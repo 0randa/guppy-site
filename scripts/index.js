@@ -1,7 +1,6 @@
 import { fish } from "./data/fish_products.js";
-import { Cart } from "./data/cart.js";
+import { Cart } from './data/cart.js';
 
-const cart = new Cart();
 
 function renderGuppyHTML() {
     let gridHTML = '';
@@ -24,6 +23,7 @@ function renderGuppyHTML() {
 }
 
 function buttonListener() {
+    const cart = new Cart;
     const buttons = document.querySelectorAll('.add-to-cart-btn');
     
     buttons.forEach(button => {
@@ -38,6 +38,8 @@ function buttonListener() {
             alert(`${targetFish.name} added to cart!`);
         })
     })
+
+    cart.saveToLocalStorage();
 }
 
 renderGuppyHTML();
