@@ -17,7 +17,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1.5;
+    width: 80%;
+}
+
+.order-summary {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px; 
+    border: 1px solid lightgray;
+    background-color: #f9f9f9; 
+    height: 50%;
 }
 
 .shopping-cart-grid {
@@ -38,6 +49,27 @@
     flex-shrink: 0;
 }
 
+.shopping-cart-header p:first-child {
+    text-align: left; /* Aligns the "Product" header to the left */
+    flex: 1; /* Allows it to take up more space */
+    justify-content: flex-start; /* Ensures proper alignment */
+}
+
+.shopping-cart-header p:nth-child(2) {
+    text-align: center; /* Keeps "Quantity" centered */
+    flex: 1; /* Adjust width if necessary */
+}
+
+.shopping-cart-header p:last-child {
+    text-align: center; /* Keeps "Price" aligned to the right */
+    flex: 1; /* Adjust width if necessary */
+}
+
+.shopping-cart-header p {
+    flex: 1;
+    text-align: center; 
+}
+
 .shopping-cart-items-list {
     display: flex;
     flex-direction: column;
@@ -48,6 +80,8 @@
     display: flex;
     gap: 10px;
     align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid lightgray;
 }
 
 .product-info img {
@@ -92,5 +126,6 @@
 
 .price-tag {
     flex: 1;
-    text-align: right;
+    text-align: center;
+    white-space: nowrap;
 }
