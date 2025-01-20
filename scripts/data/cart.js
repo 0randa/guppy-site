@@ -28,4 +28,8 @@ export class Cart {
             console.log(item)
         }
     }
+
+    removeItem(fishId) {
+        this._cart = this._cart.filter(f => f.id !== fishId);
+    }
 }

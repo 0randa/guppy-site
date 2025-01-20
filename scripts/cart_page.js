@@ -78,20 +78,57 @@ function removeButtonListener() {
             cart._cart = updatedCart; 
             cart.saveToLocalStorage();
             alert(`Removed ${targetFish.name} from cart!`);
-            renderShoppingCart();
-            renderOrderSummary();
-            removeButtonListener();
+            renderWebsite();
         })
     )
 }
 
 function quantityButtonListener() {
+    const plusButtons = document.querySelectorAll('.plus-button');
+    const minusButtons = document.querySelectorAll('.minus-button');
+
+    plusButtons.forEach(button => 
+        button.addEventListener("click", (event) => {
+            const fishId = parseInt(event.target.dataset.fishId);
+            const cartItems = cart.getItems();
+            const targetFish = cartItems.find(f => f.id === fishId);
+            targetFish.quantity += 1;
+
+            cart.saveToLocalStorage();
+            renderWebsite();
+        })
+    )
+
+
+    minusButtons.forEach(button => 
+        button.addEventListener("click", (event) => {
+            const fishId = parseInt(event.target.dataset.fishId);
+            const cartItems = cart.getItems();
+            const targetFish = cartItems.find(f => f.id === fishId);
+            targetFish.quantity -= 1;
+
+            if (targetFish.quantity === 0) {
+                cart.removeItem(fishId);
+            }
+
+            cart.saveToLocalStorage();
+            renderWebsite();
+        })
+    )
+
 
 }
 
-// Ensure DOM is loaded
+function renderWebsite() {
+    renderShoppingCart();
+    renderOrderSummary();
+    quantityButtonListener();
+    removeButtonListener();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     renderShoppingCart();
     renderOrderSummary();
     removeButtonListener();
+    quantityButtonListener();
 });
