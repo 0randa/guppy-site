@@ -1,8 +1,6 @@
-import { Cart } from "./data/cart.js";
+import { cart } from "./data/cart_instance.js";
 
-export function renderShoppingCart() {
-    const cart = new Cart;
-    
+export function renderShoppingCart() {    
     const shopping = document.querySelector('.shopping-cart-items-list');
 
     // Null check for .shopping-cart-items-list
