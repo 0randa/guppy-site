@@ -30,8 +30,8 @@ function buttonListener() {
             const fishId = parseInt(event.target.dataset.fishId);
             const targetFish = fish.find(f => f.id === fishId);
 
-            const {id, name, priceCents} = targetFish
-            cart.append({id, name, priceCents})
+            const {image, id, name, priceCents} = targetFish
+            cart.append({image, id, name, priceCents})
             cart.saveToLocalStorage();
             // debug statement
             cart.print_cart()

@@ -13,6 +13,7 @@ export function renderShoppingCart() {
     const shoppingCart = cart.getItems();
 
     for (const item of shoppingCart) {
+        console.log(item.image)
         HTML += `
         <div class="shopping-cart-item">
             <div class="product-info">

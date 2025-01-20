@@ -4,12 +4,12 @@ export class Cart {
     }
 
     append(item) {
-        const {id, name, priceCents} = item;
-        
+        const {image, id, name, priceCents} = item;
+        console.log("item is,", item)
         const inArray = this._cart.find(item => item.id == id);
 
         if (!inArray) {
-            this._cart.push({id, name, priceCents, quantity: 1})
+            this._cart.push({image, id, name, priceCents, quantity: 1})
         } else {
             inArray.quantity += 1;
         }
