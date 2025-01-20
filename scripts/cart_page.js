@@ -21,11 +21,11 @@ export function renderShoppingCart() {
                 <p>${item.name}</p>
             </div>
             <div class="quantity-info">
-                <p>-</p>
+                <p class="js-minus_button" data-fish-id=${item.id}>-</p>
                 <div class="quantity-square">
                     <p>${item.quantity}</p>
                 </div>
-                <p>+</p>
+                <p class="js-plus-button" data-fish-id=${item.id}>+</p>
             </div>
             <div class="price-tag">
                 <p>$${item.priceCents / 100}</p>
@@ -69,7 +69,6 @@ function removeButtonListener() {
     // query select all of the elements with class "remove button"
 
     const removeButton = document.querySelectorAll('.remove-button');
-
     removeButton.forEach(button =>
         button.addEventListener("click", (event) => {
             const fishId = parseInt(event.target.dataset.fishId);
@@ -84,9 +83,6 @@ function removeButtonListener() {
             removeButtonListener();
         })
     )
-    
-    
-
 }
 
 // Ensure DOM is loaded
