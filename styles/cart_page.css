@@ -49,27 +49,6 @@
     flex-shrink: 0;
 }
 
-.shopping-cart-header p:first-child {
-    text-align: left; 
-    flex: 1; 
-    justify-content: flex-start;
-}
-
-.shopping-cart-header p:nth-child(2) {
-    text-align: center; 
-    flex: 1; 
-}
-
-.shopping-cart-header p:last-child {
-    text-align: left;
-    flex: 1; 
-}
-
-.shopping-cart-header p {
-    flex: 1;
-    text-align: center; 
-}
-
 .shopping-cart-items-list {
     display: flex;
     flex-direction: column;
@@ -83,49 +62,73 @@
     padding: 15px 0;
     border-bottom: 1px solid lightgray;
     gap: 15px;
+    font-weight: bold;
+    width: 100%;
 }
 
+.shopping-cart-item:first-child {
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    padding: 15px 0;
+}
+
+.shopping-cart-item p {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+}
+
+.shopping-cart-item p:first-child {
+    text-align: left;
+    flex: 2;
+}
+
+
+.product-info {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 .product-info img {
     width: 150px;
     height: 100px;
     object-fit: cover;
 }
-
-.product-info {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex: 2;
-    text-align: left;
-}
-
 .quantity-info {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    flex: 1;
-    text-align: center;
+    gap: 20px;
 }
 
 .quantity-square {
     display: flex;
-    height: 40px;
-    width: 40px;
     justify-content: center;
     align-items: center;
+    height: 40px;
+    width: 40px;
     border-width: 1px;
     border-style: solid;
     border-radius: 50%;
     border-color: lightgray;
     background-color: wheat;
     line-height: 1;
+    margin: 0;
 }
 
-.remove-button {
+.quantity-square p {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
     text-align: center;
+  }
+
+.remove-button {
     flex: 0.5; 
+    text-align: center;
     color: red; 
     cursor: pointer;
     font-weight: bold;
@@ -136,12 +139,8 @@
     text-decoration: underline;
 }
 
-.shopping-cart-header p {
-    text-align: center;
-}
 
 .price-tag {
     flex: 1;
     text-align: center;
-    white-space: nowrap;
 }
