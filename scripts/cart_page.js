@@ -21,11 +21,11 @@ export function renderShoppingCart() {
                 <p>${item.name}</p>
             </div>
             <div class="quantity-info">
-                <p class="js-minus_button" data-fish-id=${item.id}>-</p>
+                <p class="js-minus_button minus-button" data-fish-id=${item.id}>-</p>
                 <div class="quantity-square">
                     <p>${item.quantity}</p>
                 </div>
-                <p class="js-plus-button" data-fish-id=${item.id}>+</p>
+                <p class="js-plus-button plus-button" data-fish-id=${item.id}>+</p>
             </div>
             <div class="price-tag">
                 <p>$${item.priceCents / 100}</p>
@@ -83,6 +83,10 @@ function removeButtonListener() {
             removeButtonListener();
         })
     )
+}
+
+function quantityButtonListener() {
+
 }
 
 // Ensure DOM is loaded
