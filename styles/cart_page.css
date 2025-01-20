@@ -1,6 +1,15 @@
 .cart-rest-of-website {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-and-summary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
 }
 
 .checkout-cart {
@@ -8,6 +17,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex: 1.5;
 }
 
 .shopping-cart-grid {
