@@ -1,4 +1,5 @@
 import { cart } from "./data/cart_instance.js";
+import { formatCurrency } from "./helper.js";
 
 export function renderShoppingCart() {    
     const shopping = document.querySelector('.shopping-cart-items-list');
@@ -37,7 +38,36 @@ export function renderShoppingCart() {
     shopping.innerHTML = HTML;
 }
 
+function getNumCartItems(cart) {
+    let totalItems = 0;
+    let totalPrice = 0;
+
+    for (const item of cart.getItems()) {
+        totalItems += item.quantity;
+        totalPrice += item.quantity * item.priceCents;
+    }
+
+    return {totalItems, totalPrice};
+
+}
+
+function renderOrderSummary() {
+    const orderSummary = document.querySelector('.order-summary');
+
+    const {totalItems, totalPrice} = getNumCartItems(cart);
+    // TODO: fix shipping and order
+    const HTML = `<p>Order summary</p>
+                    <p>Items (${totalItems}): ${formatCurrency(totalPrice)}</p>
+                    <p>Shipping: $0</p>
+                    <p>Order total: ${formatCurrency(totalPrice)}</p>
+
+                    <button>Place your order</button>`
+
+    orderSummary.innerHTML = HTML;
+}
+
 // Ensure DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     renderShoppingCart();
+    renderOrderSummary();
 });
