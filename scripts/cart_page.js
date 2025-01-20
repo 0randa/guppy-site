@@ -14,7 +14,6 @@ export function renderShoppingCart() {
     const shoppingCart = cart.getItems();
 
     for (const item of shoppingCart) {
-        console.log(item.image)
         HTML += `
         <div class="shopping-cart-item">
             <div class="product-info">
@@ -31,7 +30,7 @@ export function renderShoppingCart() {
             <div class="price-tag">
                 <p>$${item.priceCents / 100}</p>
             </div>
-            <p class="remove-button">x</p>
+            <p class="remove-button" data-fish-id=${item.id}>x</p>
         </div>`;
     }
 
@@ -66,8 +65,33 @@ function renderOrderSummary() {
     orderSummary.innerHTML = HTML;
 }
 
+function removeButtonListener() {
+    // query select all of the elements with class "remove button"
+
+    const removeButton = document.querySelectorAll('.remove-button');
+
+    removeButton.forEach(button =>
+        button.addEventListener("click", (event) => {
+            const fishId = parseInt(event.target.dataset.fishId);
+            const cartItems = cart.getItems();
+            const targetFish = cartItems.find(f => f.id === fishId);
+            const updatedCart = cartItems.filter(f => f.id !== fishId);
+            cart._cart = updatedCart; 
+            cart.saveToLocalStorage();
+            alert(`Removed ${targetFish.name} from cart!`);
+            renderShoppingCart();
+            renderOrderSummary();
+            removeButtonListener();
+        })
+    )
+    
+    
+
+}
+
 // Ensure DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     renderShoppingCart();
     renderOrderSummary();
+    removeButtonListener();
 });
