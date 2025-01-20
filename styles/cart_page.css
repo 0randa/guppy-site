@@ -78,11 +78,13 @@
 
 .shopping-cart-item {
     display: flex;
-    gap: 10px;
     align-items: center;
+    justify-content: space-between;
     padding: 15px 0;
     border-bottom: 1px solid lightgray;
+    gap: 15px;
 }
+
 
 .product-info img {
     width: 150px;
@@ -118,6 +120,21 @@
     border-color: lightgray;
     background-color: wheat;
     line-height: 1;
+}
+
+.remove-button {
+    margin-left: auto; 
+    text-align: center;
+    padding: 0 10px;
+    color: red; 
+    font-weight: bold;
+    cursor: pointer;
+    flex: 0; 
+}
+
+.remove-button:hover {
+    color: darkred; 
+    text-decoration: underline;
 }
 
 .shopping-cart-header p {
