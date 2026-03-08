@@ -1,3 +1,5 @@
+import { IconSearch, IconShoppingCart, IconUserCircle } from "@tabler/icons-react";
+
 export function Header() {
   return (
     <>
@@ -8,10 +10,14 @@ export function Header() {
         </div>
 
         <div className="right-section">
-          <img src="icons/search.svg" alt="Search" />
-          <img src="icons/profile-icon.jpeg" alt="Profile" />
-          <a href="cart.html">
-            <img src="icons/shopping-cart.png" alt="Cart" />
+          <span className="header-icon-shell" aria-hidden="true">
+            <IconSearch className="header-icon" stroke={1.9} />
+          </span>
+          <span className="header-icon-shell" aria-hidden="true">
+            <IconUserCircle className="header-icon" stroke={1.9} />
+          </span>
+          <a href="cart.html" className="header-icon-shell" aria-label="Cart">
+            <IconShoppingCart className="header-icon" stroke={1.9} />
           </a>
         </div>
       </div>
