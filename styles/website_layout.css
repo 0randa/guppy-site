@@ -1,11 +1,24 @@
+.website-layout,
 .website_layout {
     display: grid;
-    /* have 2 rows */
-    grid-template-rows: 2fr 10fr;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
 }
 
 
 .rest-of-website {
     display: flex;
     flex-direction: row;
+    gap: 16px;
+    width: min(96%, 1180px);
+    margin: 20px auto;
+    align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+    .rest-of-website {
+        flex-direction: column;
+        width: 94%;
+        margin: 14px auto;
+    }
 }

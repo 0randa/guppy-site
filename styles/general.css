@@ -1,3 +1,46 @@
+:root {
+    --retro-bg-top: #dce9ff;
+    --retro-bg-bottom: #aac5ee;
+    --retro-line: #8ca6cb;
+    --retro-panel-top: #f8fbff;
+    --retro-panel-bottom: #dbe8f9;
+    --retro-border: #91a9c8;
+    --retro-border-dark: #6e85a3;
+    --retro-text: #1a2c48;
+    --retro-muted: #4a5f80;
+    --retro-blue-top: #6aa7ed;
+    --retro-blue-bottom: #2f6eb7;
+    --retro-blue-dark: #234f86;
+    --retro-danger-top: #f79f8d;
+    --retro-danger-bottom: #cc5440;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial;
+    margin: 0;
+    color: var(--retro-text);
+    font-family: Tahoma, Verdana, "Trebuchet MS", Arial, sans-serif;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 20%),
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.16) 0px,
+            rgba(255, 255, 255, 0.16) 1px,
+            rgba(255, 255, 255, 0) 1px,
+            rgba(255, 255, 255, 0) 30px
+        ),
+        linear-gradient(180deg, var(--retro-bg-top), var(--retro-bg-bottom));
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
 }

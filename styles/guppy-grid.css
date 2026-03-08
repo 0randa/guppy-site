@@ -1,5 +1,5 @@
 .guppy-paragraph {
-    display: flex; 
+    display: flex;
     position: absolute;
     left: 10%;
     top: 70px;
@@ -8,59 +8,122 @@
 .guppy-grid {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
     justify-content: space-between;
-    background-color: #F8F8F8;
+    background: linear-gradient(to bottom, rgba(245, 250, 255, 0.72), rgba(215, 229, 247, 0.72));
+    border: 1px solid #8fa8c8;
+    border-radius: 10px;
+    padding: 14px;
     width: 90%;
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.95) inset,
+        0 4px 14px rgba(45, 67, 99, 0.2);
 }
 
 .guppy-info {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    width: 330px;
-    height: 400px;
-    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 390px;
+    background: linear-gradient(to bottom, #ffffff 0%, #eef4fd 100%);
+    border: 1px solid #839bc0;
     border-radius: 10px;
-    padding: 10px; 
-    box-sizing: border-box; 
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.98) inset,
+        0 -1px 0 rgba(112, 139, 175, 0.26) inset,
+        0 4px 12px rgba(37, 57, 84, 0.22);
+    animation: panel-enter 280ms ease-out;
 }
 
 .guppy-info img {
-    height: 65%;
+    height: 230px;
     width: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 8px;
+    border: 1px solid #879ec0;
+    box-shadow: 0 2px 5px rgba(38, 53, 78, 0.24);
 }
 
 .guppy-description {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     text-align: center;
+    margin-top: 10px;
 }
 
 .guppy-description button {
-    width: 180px;
-    height: 40px;
-    background-color: blue;
+    width: 190px;
+    height: 38px;
+    background: linear-gradient(to bottom, #7db9f1 0%, #3f86cf 52%, #2f6eb8 100%);
     color: white;
-    border: none;
-    border-radius: 20px;
-    margin-top: 10px; 
+    border: 1px solid #2c5c92;
+    border-radius: 18px;
+    margin-top: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    text-shadow: 0 -1px 0 rgba(23, 57, 98, 0.7);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.65) inset,
+        0 -1px 0 rgba(24, 52, 85, 0.4) inset,
+        0 3px 6px rgba(32, 48, 71, 0.2);
+    transition: transform 120ms ease, filter 120ms ease;
 }
 
 .guppy-description button:hover {
     cursor: pointer;
+    filter: brightness(1.05);
+    transform: translateY(-1px);
 }
 
 .guppy-description button:active {
-    opacity: 0.5;
+    transform: translateY(1px);
+    filter: saturate(0.92);
 }
 
-.guppy-description p {
-    margin: 5px 0; 
-    line-height: 25px;
+.guppy-description p:first-child {
+    margin-top: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1b3558;
+}
+
+.guppy-description p:nth-child(2) {
+    margin-top: 3px;
+    font-size: 17px;
+    font-weight: 800;
+    color: #0b5ba8;
+}
+
+@keyframes panel-enter {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 640px) {
+    .guppy-grid {
+        width: 100%;
+        padding: 10px;
+        gap: 12px;
+    }
+
+    .guppy-info {
+        min-height: 360px;
+    }
+
+    .guppy-info img {
+        height: 210px;
+    }
 }

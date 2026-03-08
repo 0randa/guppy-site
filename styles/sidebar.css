@@ -1,25 +1,64 @@
 .sidebar {
-    width: 120px;
-    border-right: 2px solid lightgrey;
-    box-shadow: 3px 0px 0px 0px rgba(191, 191, 207, 0.2);
+    width: 180px;
+    border-right: 1px solid #7790b0;
+    border-left: 1px solid #d8e4f5;
+    border-top: 1px solid #d8e4f5;
+    border-bottom: 1px solid #90a8c8;
+    border-radius: 8px;
+    padding: 16px 12px;
+    background: linear-gradient(to bottom, #f7fbff 0%, #dbe8f8 100%);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.95) inset,
+        0 -1px 0 rgba(102, 128, 162, 0.28) inset,
+        0 4px 10px rgba(52, 73, 103, 0.22);
 }
 
 .price-box:hover {
-    color: lightcoral;
+    color: #b7472a;
     cursor: pointer;
 }
 
 .sidebar-box {
-    margin-top: 0px;
-    margin-bottom: 40px;
+    margin-top: 0;
+    margin-bottom: 18px;
+    border: 1px solid #b4c5de;
+    border-radius: 6px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #f7fbff, #e5eefb);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.85) inset;
 }
 
 .sidebar-box-category {
-    font-weight: 600;
-    line-height: 5px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 8px 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #15365f;
+    border-bottom: 1px solid #b6c8df;
+    background: linear-gradient(to bottom, #f2f8ff, #cadcf2);
 }
 
 .sidebar-box-elements {
-    line-height: 9px;
+    line-height: 1.25;
     display: block;
+    padding: 8px 10px;
+}
+
+.sidebar-box-elements p,
+.sidebar-box-elements div {
+    margin: 8px 0;
+    font-size: 12px;
+    color: #2a4569;
+}
+
+.sidebar-box-elements input[type="checkbox"] {
+    accent-color: #2f6fb9;
+    margin-right: 4px;
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        width: 100%;
+    }
 }
